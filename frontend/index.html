@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Registro de tareas</title>
+</head>
+
+<body>
+    <header>
+        <h2>
+            Registro de tareas
+        </h2>
+    </header>
+    <main>
+        <article>
+            <section class="left-section">
+                <div id="editando">Agregar nueva tarea</div>
+                <label for="responsable">Responsable</label>
+                <input type="text" id="responsable" oninput="validarNombre()">
+                <label for="cantidad-dias">Días de duración</label>
+                <input type="number" id="cantidad-dias" oninput="validarNum()">
+                <label for="fecha-inicio">Fecha de inicio</label>
+                <input type="date" id="fecha-inicio">
+                <label for="fecha-exp">Fecha de expiración</label>
+                <input type="date" id="fecha-exp">
+                <label for="descripcion">Descripción</label>
+                <input type="text" id="descripcion" oninput="validarTexto()">
+                <button onclick="subirTarea()">Subir</button>
+            </section>
+            <section id="add" class="right-section">
+                <table id="activity-list" border="1">
+                </table>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <h4>Hecho por Carlos Gutiérrez</h4>
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>
